@@ -12,6 +12,7 @@ import FeaturedDestinations from './Component/Destinations'
 import TravelBooking from './Component/TravelBooking'
 import Login from './Component/Login'
 import Journal from './Component/Journal'
+import SignUp from './Component/Signup'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
           <Route path='Destinations' element ={<FeaturedDestinations/>}/>
           <Route path='TravelBooking' element = {<TravelBooking/>}/>
           <Route path="Login" element={< Login />} />
+          <Route path='Signup' element={<SignUp />} />
           <Route path="Journal" element={<Journal />} />
         </Route>
       </Routes>

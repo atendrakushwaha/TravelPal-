@@ -1,7 +1,6 @@
-// SignUp.js
 import React from 'react';
 
-const SignUp = () => {
+const SignUp = ({ onLogin }) => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-200">
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg text-center">
@@ -45,7 +44,7 @@ const SignUp = () => {
           </button>
         </form>
         <p className="mt-4 text-sm text-gray-700">
-          Already have an account? <a href="#" className="text-blue-500 hover:underline">Log in</a>
+          Already have an account? <button onClick={onLogin} className="text-blue-500 hover:underline">Log in</button>
         </p>
       </div>
     </div>

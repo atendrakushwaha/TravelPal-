@@ -1,7 +1,5 @@
-// Login.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Signup from './Signup'; // Ensure the import matches the component name
+import Signup from './Signup';
 
 const LoginPage = ({ onSignup }) => {
   return (
@@ -54,9 +52,13 @@ const Login = () => {
     setShowSignup(true);
   };
 
+  const handleGoToLogin = () => {
+    setShowSignup(false);
+  };
+
   return (
     <div>
-      {showSignup ? <Signup /> : <LoginPage onSignup={handleStartPlanning} />}
+      {showSignup ? <Signup onLogin={handleGoToLogin} /> : <LoginPage onSignup={handleStartPlanning} />}
     </div>
   );
 };
